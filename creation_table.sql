@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS Jouer_match CASCADE;
 
 CREATE TABLE Nationalites (id_nationalite INT NOT NULL, lib_nationalite VARCHAR(3), PRIMARY KEY (id_nationalite) );
 
-CREATE TABLE Joueurs (id_personne INT NOT NULL,id_equipe INT NOT NULL, date_join DATE,id_stat INT NOT NULL, id_nationalite INT NOT NULL, pseudo VARCHAR(50), age INT, PRIMARY KEY (id_personne) );
+CREATE TABLE Joueurs (id_personne INT NOT NULL,id_equipe INT NOT NULL, date_join DATE,id_stat INT NOT NULL, id_nationalite INT NOT NULL,nom VARCHAR(50), prenom VARCHAR(50), pseudo VARCHAR(50), age INT, PRIMARY KEY (id_personne) );
 
 CREATE TABLE Stats (id_stat INT NOT NULL, s_kill INT, death INT, assist INT, PRIMARY KEY (id_stat) );
 
