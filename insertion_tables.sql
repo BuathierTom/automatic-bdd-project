@@ -33,7 +33,7 @@ INSERT INTO Equipes VALUES(14,'Outsiders');
 INSERT INTO Equipes VALUES(15,'Bad News Eagles');
 INSERT INTO Equipes VALUES(16,'Team Liquid');
 
---id personne--id equipe--date join--id stat--id nationalité--nom--prenom--pseudo--age--
+-- id personne -- id equipe -- date join -- id stat -- id nationalité -- nom -- prenom -- pseudo -- age --
 
 INSERT INTO Joueurs VALUES(1,1,'2019-03-03',1,1,'Leonid','Vishnyakov','chopper',25);
 INSERT INTO Joueurs VALUES(2,1,'2019-09-26',2,1,'Boris','Vorobyev','magixx',19);
@@ -45,8 +45,13 @@ INSERT INTO Joueurs VALUES(6,2,'2016-08-04',6,2,'s1mple','Oleksandr','Kostyliev	
 INSERT INTO Joueurs VALUES(7,2,'2017-11-06',7,2,'electroNic','Sharipov','Denis',24);
 INSERT INTO Joueurs VALUES(8,2,'2020-01-24',8,2,'Perfecto','Zalutskiy','Ilya',23);
 INSERT INTO Joueurs VALUES(9,2,'2020-12-20',9,2,'b1t','Valerii','Vakhovskyi',19);
-INSERT INTO Joueurs VALUES(10,2,'2020-12-20',10,2,'b1t','Valerii','Vakhovskyi',19);
+INSERT INTO Joueurs VALUES(10,2,'2022-06-03',10,2,'sdy','Orudzhev','Viktor',25);
 
+INSERT INTO Joueurs VALUES(11,3,'2016-08-04',11,3,'s1mple','Oleksandr','Kostyliev	',25);
+INSERT INTO Joueurs VALUES(12,3,'2017-11-06',12,3,'electroNic','Sharipov','Denis',24);
+INSERT INTO Joueurs VALUES(13,3,'2020-01-24',13,3,'Perfecto','Zalutskiy','Ilya',23);
+INSERT INTO Joueurs VALUES(14,3,'2020-12-20',14,3,'b1t','Valerii','Vakhovskyi',19);
+INSERT INTO Joueurs VALUES(15,3,'2022-06-03',15,3,'sdy','Orudzhev','Viktor',25);
 
 
 
