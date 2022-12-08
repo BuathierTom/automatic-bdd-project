@@ -35,11 +35,11 @@ INSERT INTO Equipes VALUES(16,'Team Liquid');
 
 -- id personne -- id equipe -- date join -- id stat -- id nationalité -- nom -- prenom -- pseudo -- age --
 
-INSERT INTO Joueurs VALUES(1,1,'2019-03-03',1,1,'Leonid','Vishnyakov','chopper',25);
-INSERT INTO Joueurs VALUES(2,1,'2019-09-26',2,1,'Boris','Vorobyev','magixx',19);
-INSERT INTO Joueurs VALUES(3,1,'2022-02-06',3,1,'Robert','Isyanov','Patsi',19);
-INSERT INTO Joueurs VALUES(4,1,'2022-02-06',4,1,'Pavel','Ogloblin','s1ren',20);
-INSERT INTO Joueurs VALUES(5,1,'2022-06-21',5,1,'Ihor','Zhdanov','w0nderful	',17);
+INSERT INTO Joueurs VALUES(1,1,'2019-03-03',1,1,'chopper','Vishnyakov','Leonid',25);
+INSERT INTO Joueurs VALUES(2,1,'2019-09-26',2,1,'magixx','Vorobyev','Boris',19);
+INSERT INTO Joueurs VALUES(3,1,'2022-02-06',3,1,'Patsi','Isyanov','Robert',19);
+INSERT INTO Joueurs VALUES(4,1,'2022-02-06',4,1,'s1ren','Ogloblin','Pavel',20);
+INSERT INTO Joueurs VALUES(5,1,'2022-06-21',5,1,'w0nderful','Zhdanov','Ihor',17);
 
 INSERT INTO Joueurs VALUES(6,2,'2016-08-04',6,2,'s1mple','Oleksandr','Kostyliev	',25);
 INSERT INTO Joueurs VALUES(7,2,'2017-11-06',7,2,'electroNic','Sharipov','Denis',24);
@@ -65,29 +65,48 @@ INSERT INTO Joueurs VALUES(23,5,'2021-01-30',23,5,'Twistzz','Van Dulken','Russel
 INSERT INTO Joueurs VALUES(24,5,'2021-02-15',24,5,'karrigan','Andersen','Finn',32);
 INSERT INTO Joueurs VALUES(25,5,'2022-01-03',25,5,'ropz','Kool','Robin',22);
 
-INSERT INTO Joueurs VALUES(26,6,'2016-01-20',26,6,'rain','Nygaard','Håvard',28);
-INSERT INTO Joueurs VALUES(27,6,'2019-09-26',27,6,'broky','Saukants','Helvijs',21);
-INSERT INTO Joueurs VALUES(28,6,'2021-01-30',28,6,'Twistzz','Van Dulken','Russel',23);
-INSERT INTO Joueurs VALUES(29,6,'2021-02-15',29,6,'karrigan','Andersen','Finn',32);
-INSERT INTO Joueurs VALUES(30,6,'2022-01-03',30,6,'ropz','Kool','Robin',22);
+INSERT INTO Joueurs VALUES(26,6,'2022-08-13',26,6,'birdfromsky','Due Frederiksen','Thomas',29);
+INSERT INTO Joueurs VALUES(27,6,'2022-08-13',27,6,'regali','Harjău','Iulian',20);
+INSERT INTO Joueurs VALUES(28,6,'2022-08-13',28,6,'raalz','Steensborg','Rasmus',27);
+INSERT INTO Joueurs VALUES(29,6,'2022-08-13',29,6,'TMB','Bundsbæk','Thomas',20);
+INSERT INTO Joueurs VALUES(30,6,'2022-08-13',30,6,'b0RUP','Borup','Johannes',23);
 
-INSERT INTO Joueurs VALUES(31,7,'2022-08-13',31,7,'birdfromsky','Due Frederiksen','Thomas',29);
-INSERT INTO Joueurs VALUES(32,7,'2022-08-13',32,7,'regali','Harjău','Iulian',20);
-INSERT INTO Joueurs VALUES(33,7,'2022-08-13',33,7,'raalz','Steensborg','Rasmus',27);
-INSERT INTO Joueurs VALUES(34,7,'2022-08-13',34,7,'TMB','Bundsbæk','Thomas',20);
-INSERT INTO Joueurs VALUES(35,7,'2022-08-13',35,7,'b0RUP','Borup','Johannes',23);
+INSERT INTO Joueurs VALUES(31,7,'2020-04-05',31,7,'stavn','Lund','Martin',20);
+INSERT INTO Joueurs VALUES(32,7,'2020-04-05',32,7,'cadiaN','Møller','Casper',27);
+INSERT INTO Joueurs VALUES(33,7,'2020-04-08',33,7,'TeSeS','Madsen','René',21);
+INSERT INTO Joueurs VALUES(34,7,'2021-02-26',34,7,'sjuush','Beck','Rasmus',23);
+INSERT INTO Joueurs VALUES(35,7,'2022-06-21',35,7,'Jabbi','Nygaard','Jakob',19);
 
-INSERT INTO Joueurs VALUES(36,8,'2020-04-05',36,8,'stavn','Lund','Martin',20);
-INSERT INTO Joueurs VALUES(37,8,'2020-04-05',37,8,'cadiaN','Møller','Casper',27);
-INSERT INTO Joueurs VALUES(38,8,'2020-04-08',38,8,'TeSeS','Madsen','René',21);
-INSERT INTO Joueurs VALUES(39,8,'2021-02-26',39,8,'sjuush','Beck','Rasmus',23);
-INSERT INTO Joueurs VALUES(40,8,'2022-06-21',40,8,'Jabbi','Nygaard','Jakob',19);
+INSERT INTO Joueurs VALUES(36,8,'2017-11-08',36,8,'yuurih','Boian','Yuri',22);
+INSERT INTO Joueurs VALUES(37,8,'2018-02-06',37,8,'arT','Piovezan','Andrei',26);
+INSERT INTO Joueurs VALUES(38,8,'2018-02-06',38,8,'KSCERATO','Cerato','Kaike',23);
+INSERT INTO Joueurs VALUES(39,8,'2021-08-23',39,8,'drop','Abreu','André',18);
+INSERT INTO Joueurs VALUES(40,8,'2022-01-06',40,8,'saffee','Costa','Rafael',27);
 
-INSERT INTO Joueurs VALUES(41,9,'2017-11-08',41,9,'yuurih','Boian','Yuri',22);
-INSERT INTO Joueurs VALUES(42,9,'2018-02-06',42,9,'arT','Piovezan','Andrei',26);
-INSERT INTO Joueurs VALUES(43,9,'2018-02-06',43,9,'KSCERATO','Cerato','Kaike',23);
-INSERT INTO Joueurs VALUES(44,9,'2021-08-23',44,9,'drop','Abreu','André',18);
-INSERT INTO Joueurs VALUES(45,9,'2022-01-06',45,9,'saffee','Costa','Rafael',27);
+INSERT INTO Joueurs VALUES(41,9,'2019-09-30',41,9,'huNter-','Kovač','Nemanja',26);
+INSERT INTO Joueurs VALUES(42,9,'2020-10-28',42,9,'NiKo','Kovač','Nikola',25);
+INSERT INTO Joueurs VALUES(43,9,'2022-01-03',43,9,'m0NESY','Osipov','Ilya',17);
+INSERT INTO Joueurs VALUES(44,9,'2022-08-16',44,9,'jks','Savage','Justin',26);
+INSERT INTO Joueurs VALUES(45,9,'2022-08-16',45,9,'HooXi','Nielsen','Rasmus',27);
+
+INSERT INTO Joueurs VALUES(46,10,'2018-10-08',46,10,'apEX-','Madesclaire','Dan',29);
+INSERT INTO Joueurs VALUES(47,10,'2018-10-08',47,10,'ZywOo','Herbaut','Mathieu',22);
+INSERT INTO Joueurs VALUES(48,10,'2022-01-05',48,10,'dupreeh','Rasmussen','Peter',29);
+INSERT INTO Joueurs VALUES(49,10,'2022-01-05',49,10,'Magisk','Reif','Emil',24);
+INSERT INTO Joueurs VALUES(50,10,'2022-08-15',50,10,'Spinx','Giladi','Lotan',22);
+
+INSERT INTO Joueurs VALUES(51,11,'2022-02-18',51,11,'FalleN','Toledo','Gabriel',31);
+INSERT INTO Joueurs VALUES(52,11,'2022-02-18',52,11,'fer','Alvarenga','Fernando',31);
+INSERT INTO Joueurs VALUES(53,11,'2022-02-18',53,11,'boltz','Prass','Ricardo',25);
+INSERT INTO Joueurs VALUES(54,11,'2022-02-18',54,11,'VINI','Figueiredo','Vinicius',23);
+INSERT INTO Joueurs VALUES(55,11,'2022-08-22',55,11,'chelo','Cespedes','Marcelo',24);
+
+INSERT INTO Joueurs VALUES(56,12,'2017-01-02',56,12,'tabseN','Wodarz','Johannes',27);
+INSERT INTO Joueurs VALUES(57,12,'2020-01-01',57,12,'syrsoN','Rische','Florian',26);
+INSERT INTO Joueurs VALUES(58,12,'2021-12-27',58,12,'faveN','Baumann','Josef',22);
+INSERT INTO Joueurs VALUES(59,12,'2022-03-19',59,12,'Krimbo','Moussa','Karim',20);
+INSERT INTO Joueurs VALUES(60,12,'2022-08-09',60,12,'k1to','Gruhne','Nils',24);
+
 
 
 
