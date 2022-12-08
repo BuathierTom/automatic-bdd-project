@@ -35,7 +35,7 @@ INSERT INTO Equipes VALUES(16,'Team Liquid'); --
 
 -- id personne -- id equipe -- id stat -- id nationalité --  pseudo -- date nai --
 
-INSERT INTO Joueurs VALUES(1,1,1,1)
+INSERT INTO Joueurs VALUES(1,1,1,1,)
 
 
 
