@@ -225,8 +225,21 @@ INSERT INTO Matchs VALUES(15,1,3,'19/16');
 
 -- id equipe -- id equipe 1 -- id equipe 2 -- id match -- date --
 
-INSERT INTO Jouer_match VALUES(1,1,5,1,'2022-12-08');
-
+INSERT INTO Jouer_match VALUES(1,1,9,1,'2022-12-08');
+INSERT INTO Jouer_match VALUES(8,8,10,2,'2022-12-08');
+INSERT INTO Jouer_match VALUES(5,5,11,3,'2022-12-08');
+INSERT INTO Jouer_match VALUES(4,4,12,4,'2022-12-08');
+INSERT INTO Jouer_match VALUES(3,3,13,5,'2022-12-08');
+INSERT INTO Jouer_match VALUES(6,6,14,6,'2022-12-08');
+INSERT INTO Jouer_match VALUES(7,7,16,7,'2022-12-08');
+INSERT INTO Jouer_match VALUES(2,2,15,8,'2022-12-08');
+INSERT INTO Jouer_match VALUES(1,1,8,9,'2022-12-08');
+INSERT INTO Jouer_match VALUES(5,5,4,10,'2022-12-08');
+INSERT INTO Jouer_match VALUES(3,3,6,11,'2022-12-08');
+INSERT INTO Jouer_match VALUES(7,7,2,12,'2022-12-08');
+INSERT INTO Jouer_match VALUES(1,1,5,13,'2022-12-08');
+INSERT INTO Jouer_match VALUES(3,3,2,14,'2022-12-08');
+INSERT INTO Jouer_match VALUES(5,5,2,15,'2022-12-08');
 
 -- id map -- nom map --
 
