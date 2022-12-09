@@ -107,12 +107,29 @@ INSERT INTO Joueurs VALUES(58,12,'2021-12-27',58,12,'faveN','Baumann','Josef',22
 INSERT INTO Joueurs VALUES(59,12,'2022-03-19',59,12,'Krimbo','Moussa','Karim',20);
 INSERT INTO Joueurs VALUES(60,12,'2022-08-09',60,12,'k1to','Gruhne','Nils',24);
 
+INSERT INTO Joueurs VALUES(61,13,'2022-04-24',61,13,'nafany','Gorshkov','Vladislav',21);
+INSERT INTO Joueurs VALUES(62,13,'2022-04-24',62,13,'sh1ro','Sokolov','Dmitriy',21);
+INSERT INTO Joueurs VALUES(63,13,'2022-04-24',63,13,'interz','Yakushin','Timofey',22);
+INSERT INTO Joueurs VALUES(64,13,'2022-04-24',64,13,'Ax1Le','Rykhtorov','Sergey',20);
+INSERT INTO Joueurs VALUES(65,13,'2022-04-24',65,13,'HObbit','Hasenov','Abai',28);
 
+INSERT INTO Joueurs VALUES(66,14,'2022-03-04',66,14,'Qikert','Golubev','Aleksei',23);
+INSERT INTO Joueurs VALUES(67,14,'2022-03-04',67,14,'Jame','Ali','Dzhami',24);
+INSERT INTO Joueurs VALUES(68,14,'2022-03-04',68,14,'FL1T','Lebedev','Evgeniy',21);
+INSERT INTO Joueurs VALUES(69,14,'2022-05-31',69,14,'n0rb3r7','Daniyelyan','David',21);
+INSERT INTO Joueurs VALUES(70,14,'2022-05-31',70,14,'fame','Bolyshev','Pyotr',19);
 
+INSERT INTO Joueurs VALUES(71,15,'2022-02-05',71,15,'SENER1','Mahmuti','Sener',25);
+INSERT INTO Joueurs VALUES(72,15,'2022-02-05',72,15,'gxx-','Kolgeci','Genc',23);
+INSERT INTO Joueurs VALUES(73,15,'2022-02-05',73,15,'juanflatroo','Halimi','Flatron',25);
+INSERT INTO Joueurs VALUES(74,15,'2022-02-05',74,15,'sinnopsyy','Budeci','Dionis',27);
+INSERT INTO Joueurs VALUES(75,15,'2022-02-05',75,15,'rigoN','Gashi','Rigon',23);
 
-
-
-
+INSERT INTO Joueurs VALUES(76,16,'2015-03-22',76,16,'EliGE','Jablonowski','Jonathan',25);
+INSERT INTO Joueurs VALUES(77,16,'2018-02-05',77,16,'NAF','Markovic','Keith',23);
+INSERT INTO Joueurs VALUES(78,16,'2021-12-27',78,16,'oSee','Ohm','Joshua',25);
+INSERT INTO Joueurs VALUES(79,16,'2022-01-15',79,16,'nitr0','Cannella','Nicholas',27);
+INSERT INTO Joueurs VALUES(80,16,'2022-10-18',80,16,'YEKINDAR','Gaļinskis','Mareks',23);
 
 -- id stat -- kill --  death --  assist --
 
@@ -125,6 +142,15 @@ INSERT INTO Matchs VALUES(1,1,1,'16/5');
 -- id map -- nom map --
 
 INSERT INTO Maps VALUES(1,'Dust 2');
+INSERT INTO Maps VALUES(2,'Mirage');
+INSERT INTO Maps VALUES(3,'Inferno');
+INSERT INTO Maps VALUES(4,'Nuke');
+INSERT INTO Maps VALUES(5,'Overpass');
+INSERT INTO Maps VALUES(6,'Cache');
+INSERT INTO Maps VALUES(7,'Vertigo');
+INSERT INTO Maps VALUES(8,'Ancient');
+INSERT INTO Maps VALUES(9,'Train');
+
 
 -- id comment -- nom -- prenom --
 
