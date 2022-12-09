@@ -134,6 +134,7 @@ INSERT INTO Joueurs VALUES(80,16,'2022-10-18',80,16,'YEKINDAR','Gaļinskis','Mar
 -- id stat -- kill --  death --  assist --
 
 INSERT INTO Stats VALUES(1, 2550, 256, 546);
+INSERT INTO Stats VALUES(1, 2550, 256, 546);
 
 -- id match -- id commentateur -- id map -- scores --
 
@@ -154,49 +155,18 @@ INSERT INTO Maps VALUES(9,'Train');
 
 -- id comment -- nom -- prenom --
 
-INSERT INTO Commentateurs VALUES(1,'test','test');
+INSERT INTO Commentateurs VALUES(1,'Matthew','Stott');
+INSERT INTO Commentateurs VALUES(2,'Jamie','Stewart');
+INSERT INTO Commentateurs VALUES(3,'Kevin','Pellegrino');
+INSERT INTO Commentateurs VALUES(4,'Stuart','Saw');
+INSERT INTO Commentateurs VALUES(5,'Leigh','Smith');
+INSERT INTO Commentateurs VALUES(6,'Michael','Cassidy');
+INSERT INTO Commentateurs VALUES(7,'Alex','Ellenberg');
+INSERT INTO Commentateurs VALUES(8,'César','Santcovsky');
 
 -- id equipe -- id equipe 1 -- id equipe 2 -- id match -- date --
 
 INSERT INTO Jouer_match VALUES(1,1,5,1,'2022-12-08');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
