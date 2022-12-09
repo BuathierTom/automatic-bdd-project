@@ -13,26 +13,6 @@ INSERT INTO Nationalites VALUES(10,'ger'); -- BIG --
 INSERT INTO Nationalites VALUES(11,'kos'); -- bad new eagle --
 INSERT INTO Nationalites VALUES(12,'ned'); -- team liquid --
 
-
--- id equipe -- nom d'equipe --
-
-INSERT INTO Equipes VALUES(1,'Team Spirit');
-INSERT INTO Equipes VALUES(2,'Natus Vincere'); 
-INSERT INTO Equipes VALUES(3,'ENCE'); 
-INSERT INTO Equipes VALUES(4,'Ninjas in Pyjamas'); 
-INSERT INTO Equipes VALUES(5,'FaZe Clan'); 
-INSERT INTO Equipes VALUES(6,'Copenhagen Flames'); 
-INSERT INTO Equipes VALUES(7,'Heroic'); 
-INSERT INTO Equipes VALUES(8,'FURIA Esports'); 
-INSERT INTO Equipes VALUES(9,'G2 Esports'); 
-INSERT INTO Equipes VALUES(10,'Team Vitality'); 
-INSERT INTO Equipes VALUES(11,'Imperial Esports'); 
-INSERT INTO Equipes VALUES(12,'BIG');
-INSERT INTO Equipes VALUES(13,'Cloud9');
-INSERT INTO Equipes VALUES(14,'Outsiders'); 
-INSERT INTO Equipes VALUES(15,'Bad News Eagles');
-INSERT INTO Equipes VALUES(16,'Team Liquid');
-
 -- id personne -- id equipe -- date join -- id stat -- id nationalité -- nom -- prenom -- pseudo -- age --
 
 INSERT INTO Joueurs VALUES(1,1,'2019-03-03',1,1,'chopper','Vishnyakov','Leonid',25);
@@ -205,9 +185,48 @@ INSERT INTO Stats VALUES( 78 , 2373 , 540 , 2882 );
 INSERT INTO Stats VALUES( 79 , 1104 , 1597 , 1174 );
 INSERT INTO Stats VALUES( 80 , 2312 , 1263 , 2047 );
 
+
+-- id equipe -- nom d'equipe --
+
+INSERT INTO Equipes VALUES(1,'Team Spirit');
+INSERT INTO Equipes VALUES(2,'Natus Vincere'); 
+INSERT INTO Equipes VALUES(3,'ENCE'); 
+INSERT INTO Equipes VALUES(4,'Ninjas in Pyjamas'); 
+INSERT INTO Equipes VALUES(5,'FaZe Clan'); 
+INSERT INTO Equipes VALUES(6,'Copenhagen Flames'); 
+INSERT INTO Equipes VALUES(7,'Heroic'); 
+INSERT INTO Equipes VALUES(8,'FURIA Esports'); 
+INSERT INTO Equipes VALUES(9,'G2 Esports'); 
+INSERT INTO Equipes VALUES(10,'Team Vitality'); 
+INSERT INTO Equipes VALUES(11,'Imperial Esports'); 
+INSERT INTO Equipes VALUES(12,'BIG');
+INSERT INTO Equipes VALUES(13,'Cloud9');
+INSERT INTO Equipes VALUES(14,'Outsiders'); 
+INSERT INTO Equipes VALUES(15,'Bad News Eagles');
+INSERT INTO Equipes VALUES(16,'Team Liquid');
+
 -- id match -- id commentateur -- id map -- scores --
 
-INSERT INTO Matchs VALUES(1,1,1,'16/5');
+INSERT INTO Matchs VALUES(1,7,1,'16/19');
+INSERT INTO Matchs VALUES(2,5,7,'16/8');
+INSERT INTO Matchs VALUES(3,4,3,'16/5');
+INSERT INTO Matchs VALUES(4,1,9,'22/19');
+INSERT INTO Matchs VALUES(5,3,1,'16/13');
+INSERT INTO Matchs VALUES(6,8,2,'16/12');
+INSERT INTO Matchs VALUES(7,2,3,'16/13');
+INSERT INTO Matchs VALUES(8,7,6,'16/2');
+INSERT INTO Matchs VALUES(9,6,7,'16/12');
+INSERT INTO Matchs VALUES(10,8,5,'16/10');
+INSERT INTO Matchs VALUES(11,4,4,'16/12');
+INSERT INTO Matchs VALUES(12,2,3,'16/8');
+INSERT INTO Matchs VALUES(13,6,1,'16/13');
+INSERT INTO Matchs VALUES(14,7,1,'16/7');
+INSERT INTO Matchs VALUES(15,1,3,'19/16');
+
+-- id equipe -- id equipe 1 -- id equipe 2 -- id match -- date --
+
+INSERT INTO Jouer_match VALUES(1,1,5,1,'2022-12-08');
+
 
 -- id map -- nom map --
 
@@ -233,9 +252,7 @@ INSERT INTO Commentateurs VALUES(6,'Michael','Cassidy');
 INSERT INTO Commentateurs VALUES(7,'Alex','Ellenberg');
 INSERT INTO Commentateurs VALUES(8,'César','Santcovsky');
 
--- id equipe -- id equipe 1 -- id equipe 2 -- id match -- date --
 
-INSERT INTO Jouer_match VALUES(1,1,5,1,'2022-12-08');
 
 
 
