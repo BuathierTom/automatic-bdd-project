@@ -1,3 +1,22 @@
+-- trigger auto maj lib_nationalites
+
+Create or replace function trig_UpperLib()
+returns trigger as $$
+
+begin
+
+new.lib_nationalite = upper(new.lib_nationalite);
+return new;
+
+end;
+$$ language plpgsql;
+
+CREATE TRIGGER UpperType
+BEFORE INSERT ON Nationalites
+FOR EACH ROW
+EXECUTE PROCEDURE trig_UpperLib();
+
+
 -- id nationalité -- lib nationalité --
 
 INSERT INTO Nationalites VALUES(1,'rus');  --team spirit -- Outsiders --
