@@ -9,7 +9,7 @@ BEGIN
     SELECT nom, prenom INTO nom_joueur, prenom_joueur FROM Joueurs as j
         INNER JOIN Equipes AS e ON j.id_equipe = e.id_equipe
             WHERE nom_equipe = nom_E;
-
+    
 END;
 LANGUAGE plpgsql;
 
