@@ -11,7 +11,7 @@ return new;
 end;
 $$ language plpgsql;
 
-CREATE TRIGGER UpperType
+CREATE TRIGGER trig_UpperLib
 BEFORE INSERT ON Nationalites
 FOR EACH ROW
 EXECUTE PROCEDURE trig_UpperLib();
@@ -136,6 +136,23 @@ INSERT INTO Equipes VALUES(14,'Outsiders');
 INSERT INTO Equipes VALUES(15,'Bad News Eagles');
 INSERT INTO Equipes VALUES(16,'Team Liquid');
 
+-- trigger auto maj nom commentateur
+
+Create or replace function trig_UpperNomCommentateur()
+returns trigger as $$
+
+begin
+
+new.nom = upper(new.nom);
+return new;
+
+end;
+$$ language plpgsql;
+
+CREATE TRIGGER trig_UpperNomCommentateur
+BEFORE INSERT ON Commentateurs
+FOR EACH ROW
+EXECUTE PROCEDURE trig_UpperNomCommentateur();
 
 -- id comment -- nom -- prenom --
 
@@ -147,6 +164,26 @@ INSERT INTO Commentateurs VALUES(5,'Leigh','Smith');
 INSERT INTO Commentateurs VALUES(6,'Michael','Cassidy');
 INSERT INTO Commentateurs VALUES(7,'Alex','Ellenberg');
 INSERT INTO Commentateurs VALUES(8,'César','Santcovsky');
+
+
+-- trigger auto maj nom des maps
+
+Create or replace function trig_UpperNomMaps()
+returns trigger as $$
+
+begin
+
+new.nom_map = upper(new.nom_map);
+return new;
+
+end;
+$$ language plpgsql;
+
+CREATE TRIGGER trig_UpperNomMaps
+BEFORE INSERT ON Maps
+FOR EACH ROW
+EXECUTE PROCEDURE trig_UpperNomMaps();
+
 
 -- id map -- nom map --
 
@@ -197,6 +234,23 @@ INSERT INTO Jouer_match VALUES(1,1,5,13,'2022-12-08');
 INSERT INTO Jouer_match VALUES(3,3,2,14,'2022-12-08');
 INSERT INTO Jouer_match VALUES(5,5,2,15,'2022-12-08');
 
+-- trigger auto maj nom Joueurs
+
+Create or replace function trig_UpperNomJoueurs()
+returns trigger as $$
+
+begin
+
+new.nom = upper(new.nom);
+return new;
+
+end;
+$$ language plpgsql;
+
+CREATE TRIGGER trig_UpperNomJoueurs
+BEFORE INSERT ON Joueurs
+FOR EACH ROW
+EXECUTE PROCEDURE trig_UpperNomJoueurs();
 
 -- id personne -- id equipe -- date join -- id stat -- id nationalité -- nom -- prenom -- pseudo -- age --
 
