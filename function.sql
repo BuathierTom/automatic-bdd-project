@@ -7,16 +7,22 @@ DECLARE
     prenom_joueur Joueurs.prenom%type;
 BEGIN
 
+    raise notice 'les noms et prenoms des joueurs de l equipe % sont:', nom_E;
+    raise notice '';
+    
     for i in 1..5
     loop 
     SELECT nom, prenom INTO nom_joueur, prenom_joueur FROM Joueurs as j
     INNER JOIN Equipes AS e ON j.id_equipe = e.id_equipe
     WHERE nom_equipe = nom_E offset i-1 limit i ;
-    raise notice 'nom : %, prenom : %',nom_joueur, prenom_joueur;
+    raise notice 'nom: %, | prenom: %',nom_joueur, prenom_joueur;
     end loop;
 
     
 END;
 $$LANGUAGE plpgsql;
+
+
+select select_equipe('BIG');
 
 
