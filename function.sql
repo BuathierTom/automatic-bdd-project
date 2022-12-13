@@ -26,6 +26,8 @@ $$LANGUAGE plpgsql;
 
 select select_equipe('BIG');
 
+-- Fonction qui retourne le raport entre le nombre d'ennemie tué et le nombre de mort qu'a chaque joueur
+
 
 CREATE OR REPLACE FUNCTION affiche_kd_joueur()
 RETURNS void as $$
