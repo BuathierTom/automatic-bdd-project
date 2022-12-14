@@ -3,6 +3,9 @@
 CREATE OR REPLACE FUNCTION select_equipe(nom_E Equipes.nom_equipe%type)
 RETURNS void AS $$
 DECLARE
+    mon_curseur cursor for SELECT nom, prenom, pseudo FROM Joueurs as j
+    INNER JOIN Equipes AS e ON j.id_equipe = e.id_equipe
+    WHERE nom_equipe = nom_E;
     nom_joueur Joueurs.nom%type;
     prenom_joueur Joueurs.prenom%type;
     pseudo_joueur Joueurs.pseudo%type;
@@ -11,11 +14,10 @@ BEGIN
     raise notice 'les noms, prenoms et pseudos des joueurs de l equipe % sont:', nom_E;
     raise notice '';
     
-    for i in 1..5
+    open mon_curseur;
     loop 
-    SELECT nom, prenom, pseudo INTO nom_joueur, prenom_joueur, pseudo_joueur FROM Joueurs as j
-    INNER JOIN Equipes AS e ON j.id_equipe = e.id_equipe
-    WHERE nom_equipe = nom_E offset i-1 limit i ;
+    fetch mon_curseur into nom_joueur, prenom_joueur, pseudo_joueur;
+    exit when not found;
     raise notice 'nom: %, | prenom: %, | pseudo : %',nom_joueur, prenom_joueur, pseudo_joueur;
     end loop;
 
@@ -52,7 +54,6 @@ BEGIN
 end;
 $$ LANGUAGE plpgsql;
 
-select affiche_kd_joueur();
 
 
 -- Fonction qui retourne le raport entre le nombre d'ennemie tué et le nombre de mort qu'a chaque joueur

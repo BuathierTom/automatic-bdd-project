@@ -1,3 +1,5 @@
+
+
 DROP TABLE IF EXISTS Nationalites CASCADE;
 DROP TABLE IF EXISTS Joueurs CASCADE;
 DROP TABLE IF EXISTS Stats CASCADE;
@@ -7,13 +9,15 @@ DROP TABLE IF EXISTS Maps CASCADE;
 DROP TABLE IF EXISTS Commentateurs CASCADE;
 DROP TABLE IF EXISTS Jouer_match CASCADE;
 
+
+
 CREATE TABLE Nationalites (id_nationalite INT NOT NULL, lib_nationalite VARCHAR(3), PRIMARY KEY (id_nationalite) );
 
 CREATE TABLE Joueurs (id_personne INT NOT NULL,id_equipe INT NOT NULL, date_join DATE,id_stat INT NOT NULL, id_nationalite INT NOT NULL, pseudo VARCHAR(50),nom VARCHAR(50), prenom VARCHAR(50), age INT, PRIMARY KEY (id_personne) );
 
-CREATE TABLE Stats (id_stat INT NOT NULL, s_kill INT, death INT, assist INT, PRIMARY KEY (id_stat) );
+CREATE TABLE Stats (id_stat INT NOT NULL, s_kill INT, death INT, KD real, PRIMARY KEY (id_stat) );
 
-CREATE TABLE Equipes (id_equipe INT NOT NULL, nom_equipe VARCHAR(50), PRIMARY KEY (id_equipe) );
+CREATE TABLE Equipes (id_equipe INT NOT NULL, nom_equipe VARCHAR(50), nb_vitoire INT, PRIMARY KEY (id_equipe));
 
 CREATE TABLE Matchs (id_match INT NOT NULL,id_commentateur INT NOT NULL, id_map INT NOT NULL, scores VARCHAR(5),PRIMARY KEY (id_match) );
 
