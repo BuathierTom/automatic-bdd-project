@@ -46,7 +46,7 @@ BEGIN
     -- le nombre de kill est divisé par le nombre de mort pour donner le ratio K/D 
     v_kd := new.s_kill/new.death;
     -- il est 
-    Update Stats set KD = v_kd where id_stat = new.id_stat;
+    Update Stats set KD = v_kd where id_ stat = new.id_stat;
     
     return new;
 
