@@ -17,7 +17,7 @@ CREATE TABLE Joueurs (id_personne INT NOT NULL,id_equipe INT NOT NULL, date_join
 
 CREATE TABLE Stats (id_stat INT NOT NULL, s_kill INT, death INT, KD real, PRIMARY KEY (id_stat) );
 
-CREATE TABLE Equipes (id_equipe INT NOT NULL, nom_equipe VARCHAR(50), nb_vitoire INT, PRIMARY KEY (id_equipe));
+CREATE TABLE Equipes (id_equipe INT NOT NULL, nom_equipe VARCHAR(50), nb_victoire INT, PRIMARY KEY (id_equipe));
 
 CREATE TABLE Matchs (id_match INT NOT NULL,id_commentateur INT NOT NULL, id_map INT NOT NULL, scores VARCHAR(5),PRIMARY KEY (id_match) );
 
