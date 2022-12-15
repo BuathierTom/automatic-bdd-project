@@ -5,6 +5,7 @@ returns trigger as $$
 
 begin
 
+-- mise en majuscule de lib_nationalité
 new.lib_nationalite = upper(new.lib_nationalite);
 return new;
 
@@ -38,22 +39,15 @@ create or replace function KD()
 returns trigger as $$
 
 DECLARE
-    mon_curseur cursor for select  pseudo, s_kill, death from Stats as S inner join Joueurs as J on S.id_stat = J.id_personne;
-    v_pseudo Joueurs.pseudo%type;
     v_kd real;
-    v_kill real;
-    v_death real;
 
 BEGIN
-    open mon_curseur;
-    loop
-    fetch mon_curseur into v_pseudo, v_kill, v_death;
-    exit when not found;
-    v_kd := v_kill/v_death;
-    insert into Stats(KD)
-        values(new.v_kd);
-    end loop;
-    close mon_curseur;
+    
+    -- le nombre de kill est divisé par le nombre de mort pour donner le ratio K/D 
+    v_kd := new.s_kill/new.death;
+    -- il est 
+    Update Stats set KD = v_kd where id_stat = new.id_stat;
+    
     return new;
 
 end;
@@ -61,9 +55,9 @@ $$ LANGUAGE plpgsql;
 
 create trigger kd after insert on Stats for each row EXECUTE PROCEDURE KD();
 
+
 -- id stat -- kill --  death --  assist --
 
-INSERT INTO Stats VALUES( 0 , 2990 , 1513 );
 INSERT INTO Stats VALUES( 1 , 2337 , 480 );
 INSERT INTO Stats VALUES( 2 , 1379 , 536 );
 INSERT INTO Stats VALUES( 3 , 507 , 1023 );
@@ -171,7 +165,7 @@ Create or replace function trig_UpperNomCommentateur()
 returns trigger as $$
 
 begin
-
+-- mise en majuscule du nom des commentateurs 
 new.nom = upper(new.nom);
 return new;
 
@@ -202,6 +196,7 @@ returns trigger as $$
 
 begin
 
+-- mise en majuscule du nom des maps
 new.nom_map = upper(new.nom_map);
 return new;
 
@@ -270,6 +265,7 @@ returns trigger as $$
 
 begin
 
+-- mise en majuscule du nom des joueurs 
 new.nom = upper(new.nom);
 return new;
 
