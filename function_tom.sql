@@ -42,27 +42,36 @@ BEGIN
 END;
 $$LANGUAGE plpgsql;
 
--- Fonction d'ajout de joueur dans la table joueur
-CREATE OR REPLACE FUNCTION ajout_joueur(J_nom VARCHAR, J_prenom VARCHAR, J_pseudo VARCHAR, J_age INT, J_nationalite VARCHAR)
+-- Fonction d'ajout de joueur dans la table joueur // Surtout bien mettre l'id de l'equipe que vous voulez avec les fonctions d'avant
+CREATE OR REPLACE FUNCTION ajout_joueur(J_nom VARCHAR, J_prenom VARCHAR, J_pseudo VARCHAR, J_age INT, J_nationalite VARCHAR, id_J_equipe INT)
 RETURNS VOID AS $$
 DECLARE
     v_id INTEGER;
-    v_equipe INTEGER;
     v_stats INTEGER;
     v_nat INTEGER;
     vdate date;
+
+    v_kill INT;
+    v_death INT;
+    v_kd INT;
 BEGIN
     -- Recuperation du plus grand id_personne + 1
     SELECT MAX(id_personne) INTO v_id FROM Joueurs;
     v_id := v_id + 1;
 
-    -- Recuperation du plus grand id_equipe + 1
-    SELECT MAX(id_equipe) INTO v_equipe FROM Equipes;
-    v_equipe := v_equipe + 1;
-
     -- Recuperation du plus grand id_stats + 1
     SELECT MAX(id_stat) INTO v_stats FROM Stats;
     v_stats := v_stats + 1;
+
+    -- v_kill = 1309;
+    -- v_death = 1210;
+
+    -- v_kd := v_kill / v_death;
+
+
+    INSERT INTO Stats(id_stat, s_kill, death) 
+    VALUES (v_stats, 20, 13);
+
     
     -- Recuperation du plus grand id_nationalite + 1
     SELECT id_nationalite INTO v_nat FROM Nationalites
@@ -70,11 +79,12 @@ BEGIN
 
     -- Insertion dans la table joueur
     INSERT INTO Joueurs(id_personne, id_equipe, date_join, id_stat, id_nationalite, pseudo, nom, prenom, age) 
-    VALUES (v_id, v_equipe, NOW(), v_stats, v_nat, J_pseudo, J_nom, J_prenom, J_age);
+    VALUES (v_id, id_J_equipe, NOW(), v_stats, v_nat, J_pseudo, J_nom, J_prenom, J_age);
 
     RAISE NOTICE 'AJOUT EFFECTUE';
 END;
 $$LANGUAGE plpgsql;
 
+-- select ajout_joueur('quentin', 'fgd', 'dsgf', 13, 'FRA', 16);
 
 
