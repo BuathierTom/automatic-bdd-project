@@ -85,5 +85,6 @@ BEGIN
 END;
 $$LANGUAGE plpgsql;
 
+-- select ajout_joueur('quentin', 'fgd', 'dsgf', 13, 'FRA', 16);
 
 
