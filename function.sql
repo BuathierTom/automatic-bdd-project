@@ -27,13 +27,13 @@ END;
 $$LANGUAGE plpgsql;
 
 select select_equipe('BIG');
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- fonction utilisant un curseur qui permet de classé les équipes dans l'ordre de leur nombre de victoires, du plus au moins victorieux
 Create or replace function classement_equipe()
 returns void as $$
 DECLARE
-    mon_curseur cursor for select nom_equipe from Equipes order by equipes.nb_vitoire desc;
+    mon_curseur cursor for select nom_equipe from Equipes order by equipes.nb_victoire desc;
     v_classement Equipes.nom_equipe%type;
     i integer;
 BEGIN
@@ -53,6 +53,8 @@ $$ language plpgsql;
 
 select classement_equipe();
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Fonction d'ajout d'equipe dans la table Equipes avec l'id max + 1
 CREATE OR REPLACE FUNCTION ajout_equip(n_equipe VARCHAR)
 RETURNS void AS $$
@@ -71,6 +73,8 @@ END;
 $$LANGUAGE plpgsql;
 
 select ajout_equip('Lens');
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Fonction d'affichage des equipe et de leur ids disponible dans la table equipe pour l'inserion des joueurs 
 CREATE OR REPLACE FUNCTION affich_equip()
@@ -97,6 +101,8 @@ END;
 $$LANGUAGE plpgsql;
 
 select affich_equip();
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Fonction d'ajout de joueur dans la table joueur // Surtout bien mettre l'id de l'equipe que vous voulez avec les fonctions d'avant
 CREATE OR REPLACE FUNCTION ajout_joueur(J_nom VARCHAR, J_prenom VARCHAR, J_pseudo VARCHAR, J_age INT, J_nationalite VARCHAR, id_J_equipe INT)
@@ -133,8 +139,7 @@ $$LANGUAGE plpgsql;
 
 select ajout_joueur('Capitaine', 'Dany', 'LensIsBetter', 29, 'FRA', 16);
 
-
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
