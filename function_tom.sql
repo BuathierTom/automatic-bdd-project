@@ -61,7 +61,7 @@ BEGIN
     v_stats := v_stats + 1;
 
     INSERT INTO Stats(id_stat, s_kill, death) 
-    VALUES (v_stats, 20, 13);
+    VALUES (v_stats, 1548, 1354);
 
     
     -- Recuperation du plus grand id_nationalite + 1
