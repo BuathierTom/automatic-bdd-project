@@ -1,5 +1,4 @@
 -- Fonction d'ajout d'equipe dans la table Equipes avec l'id max + 1
-
 CREATE OR REPLACE FUNCTION ajout_equip(n_equipe VARCHAR)
 RETURNS void AS $$
 DECLARE
@@ -13,10 +12,10 @@ BEGIN
     VALUES (v_equipe, n_equipe, 0);
 
     RAISE NOTICE 'AJOUT EFFECTUE';
-
-
 END;
 $$LANGUAGE plpgsql;
+
+select ajout_equip('Lens');
 
 -- Fonction d'affichage des equipe et de leur ids disponible dans la table equipe pour l'inserion des joueurs 
 CREATE OR REPLACE FUNCTION affich_equip()
@@ -42,6 +41,8 @@ BEGIN
 END;
 $$LANGUAGE plpgsql;
 
+select affich_equip();
+
 -- Fonction d'ajout de joueur dans la table joueur // Surtout bien mettre l'id de l'equipe que vous voulez avec les fonctions d'avant
 CREATE OR REPLACE FUNCTION ajout_joueur(J_nom VARCHAR, J_prenom VARCHAR, J_pseudo VARCHAR, J_age INT, J_nationalite VARCHAR, id_J_equipe INT)
 RETURNS VOID AS $$
@@ -50,10 +51,6 @@ DECLARE
     v_stats INTEGER;
     v_nat INTEGER;
     vdate date;
-
-    v_kill INT;
-    v_death INT;
-    v_kd INT;
 BEGIN
     -- Recuperation du plus grand id_personne + 1
     SELECT MAX(id_personne) INTO v_id FROM Joueurs;
@@ -62,12 +59,6 @@ BEGIN
     -- Recuperation du plus grand id_stats + 1
     SELECT MAX(id_stat) INTO v_stats FROM Stats;
     v_stats := v_stats + 1;
-
-    -- v_kill = 1309;
-    -- v_death = 1210;
-
-    -- v_kd := v_kill / v_death;
-
 
     INSERT INTO Stats(id_stat, s_kill, death) 
     VALUES (v_stats, 20, 13);
@@ -85,6 +76,6 @@ BEGIN
 END;
 $$LANGUAGE plpgsql;
 
--- select ajout_joueur('quentin', 'fgd', 'dsgf', 13, 'FRA', 16);
+select ajout_joueur('Capitaine', 'Dany', 'LensIsBetter', 29, 'FRA', 16);
 
 
