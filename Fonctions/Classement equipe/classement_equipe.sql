@@ -21,7 +21,5 @@ BEGIN
 end;
 $$ language plpgsql;
 
-
-
 -- Pour tester
 select classement_equipe();

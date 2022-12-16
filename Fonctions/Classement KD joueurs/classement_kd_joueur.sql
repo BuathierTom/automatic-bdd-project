@@ -15,12 +15,12 @@ BEGIN
     fetch mon_curseur into v_id, v_stats;
     exit when not found;
     case
-    when v_stats> 10 then raise notice 'le joueur % a un ration K/D moyen de % , il est trop chaud !!',v_id ,v_stats;
-    when v_stats<10 and v_stats>5 then raise notice 'le joueur % a un ration K/D moyen de % , il est bon !',v_id ,v_stats;
-    when v_stats<5 and v_stats>2 then raise notice 'le joueur % a un ration K/D moyen de % , il a un niveau correct.',v_id ,v_stats;
-    when v_stats<2 and v_stats>1 then raise notice 'le joueur % a un ration K/D moyen de % , il est pas terrible mais ca va.',v_id ,v_stats;
+    when v_stats> 10 then raise notice 'le joueur % a un ratio K/D moyen de % , il est trop chaud !!',v_id ,v_stats;
+    when v_stats<10 and v_stats>5 then raise notice 'le joueur % a un ratio K/D moyen de % , il est bon !',v_id ,v_stats;
+    when v_stats<5 and v_stats>2 then raise notice 'le joueur % a un ratio K/D moyen de % , il a un niveau correct.',v_id ,v_stats;
+    when v_stats<2 and v_stats>1 then raise notice 'le joueur % a un ratio K/D moyen de % , il est pas terrible mais ca va.',v_id ,v_stats;
     Else
-    raise notice 'le joueur % a un ration K/D moyen de % , il est vraiment nul !!!',v_id ,v_stats;
+    raise notice 'le joueur % a un ratio K/D moyen de % , il est vraiment nul !!!',v_id ,v_stats;
     end case;
     end loop;
 

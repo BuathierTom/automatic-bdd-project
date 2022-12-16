@@ -1,8 +1,6 @@
 -- Les 3 prochaines fonctions sont à utiliser à la suite !!!
 -- c'est donc pour cela qu'elles sont dans le même fichier 
 
-
-
 -- Fonction d'ajout d'equipe dans la table Equipes avec l'id max + 1
 CREATE OR REPLACE FUNCTION ajout_equip(n_equipe VARCHAR)
 RETURNS void AS $$
@@ -22,10 +20,8 @@ $$LANGUAGE plpgsql;
 
 select ajout_equip('Lens');
 
-
 ------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------
-
 
 -- Fonction d'affichage des equipe et de leur ids disponible dans la table equipe pour l'inserion des joueurs 
 CREATE OR REPLACE FUNCTION affich_equip()
@@ -53,7 +49,6 @@ select affich_equip();
 
 ------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------
-
 
 -- Fonction d'ajout de joueur dans la table joueur // Surtout bien mettre l'id de l'equipe que vous voulez avec les fonctions d'avant
 CREATE OR REPLACE FUNCTION ajout_joueur(J_nom VARCHAR, J_prenom VARCHAR, J_pseudo VARCHAR, J_age INT, J_nationalite VARCHAR, id_J_equipe INT)
