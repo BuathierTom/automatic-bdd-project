@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS Maps CASCADE;
 DROP TABLE IF EXISTS Commentateurs CASCADE;
 DROP TABLE IF EXISTS Jouer_match CASCADE;
 
-
+ 
 
 CREATE TABLE Nationalites (id_nationalite INT NOT NULL, lib_nationalite VARCHAR(3), PRIMARY KEY (id_nationalite) );
 

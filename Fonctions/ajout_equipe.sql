@@ -36,7 +36,7 @@ DECLARE
     nom VARCHAR;
 BEGIN
     i := 1;
-
+ 
     RAISE NOTICE  'id_equipe  |    nom_equipe';
     RAISE NOTICE '-----------+-------------------';
 
