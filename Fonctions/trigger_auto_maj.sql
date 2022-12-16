@@ -1,3 +1,5 @@
+-- Ces triggers sont deja intergrer par defaut dans la BDD ('insertion_tables.sql')
+
 -- trigger auto majuscule lib_nationalites
 
 Create or replace function trig_UpperLib()
