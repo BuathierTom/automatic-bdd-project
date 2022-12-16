@@ -1,4 +1,5 @@
 -- Fonction utilisant un curseur qui permet de classé les équipes dans l'ordre de leur nombre de victoires, du plus au moins victorieux
+
 Create or replace function classement_equipe()
 returns void as $$
 DECLARE

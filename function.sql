@@ -1,4 +1,4 @@
--- Fonction qui return les noms des joueurs en fonction du nom de l'equipe données
+-- Fonction qui return les noms, prenoms et pseudos des joueurs en fonction du nom de l'equipe données
 
 CREATE OR REPLACE FUNCTION select_equipe(nom_E Equipes.nom_equipe%type)
 RETURNS void AS $$
@@ -29,7 +29,7 @@ $$LANGUAGE plpgsql;
 select select_equipe('BIG');
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
--- fonction utilisant un curseur qui permet de classé les équipes dans l'ordre de leur nombre de victoires, du plus au moins victorieux
+-- fonction utilisant un curseur qui permet de classer les équipes dans l'ordre de leur nombres de victoires, du plus au moins victorieux
 Create or replace function classement_equipe()
 returns void as $$
 DECLARE
@@ -137,11 +137,11 @@ BEGIN
 END;
 $$LANGUAGE plpgsql;
 
-select ajout_joueur('Capitaine', 'Dany', 'LensIsBetter', 29, 'FRA', 16);
+select ajout_joueur('Capitaine', 'Dany', 'LensIsBetter', 29, 'FRA', 17);
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+-- Cette fonction permet d'afficher le classement du plus haut au plus petit kd avec un message en fonction du kd
 Create or replace function classement_kd_joueur()
 returns void as $$
 DECLARE

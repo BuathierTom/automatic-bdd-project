@@ -1,4 +1,3 @@
-
 -- Les 3 prochaines fonctions sont à utiliser à la suite !!!
 -- c'est donc pour cela qu'elles sont dans le même fichier 
 
@@ -41,10 +40,8 @@ BEGIN
     RAISE NOTICE  'id_equipe  |    nom_equipe';
     RAISE NOTICE '-----------+-------------------';
 
-
     WHILE EXISTS(SELECT id_equipe FROM Equipes WHERE id_equipe = i) LOOP
     SELECT id_equipe, nom_equipe INTO id, nom FROM Equipes WHERE id_equipe = i;
-
 
     RAISE NOTICE '%          |   %',id, nom;
     i := i + 1;

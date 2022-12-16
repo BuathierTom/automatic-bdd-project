@@ -1,3 +1,5 @@
+-- Cette fonction permet d'afficher le classement du plus haut au plus petit kd avec un message en fonction du kd
+
 Create or replace function classement_kd_joueur()
 returns void as $$
 DECLARE
